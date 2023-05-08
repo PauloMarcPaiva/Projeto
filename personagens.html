@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabela de Personagens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tabela de Personagens</h1>
+    <p>Obrigado, <span id="nome"></span>! Aqui estão os personagens:</p>
+    <table>
+      <tr>
+        <td><img src='socrates.jpg' onclick="exibirIntersecao(this)"></td>
+        <td><img src='santo_agostinho.jpg' onclick="exibirIntersecao(this)"></td>
+        <td><img src='john_locke.jpg' onclick="exibirIntersecao(this)"></td>
+        <td><img src='karl_marx.jpg' onclick="exibirIntersecao(this)"></td>
+      </tr>
+    </table>
+    <hr>
+
+    <h2>Teste seus conhecimentos:</h2>
+    <div>
+      <h3>Adivinhe o personagem:</h3>
+      <button onclick="sortearPersonagem()">Sortear Personagem</button>
+      <p id="mensagemSorteio"></p>
+    </div>
+    <div>
+      <h3>Faça uma pergunta:</h3>
+      <input type="text" id="pergunta" placeholder="Digite sua pergunta" disabled>
+      <button onclick="verificarPergunta()" disabled>Verificar</button>
+      <p id="mensagemPergunta"></p>
+    </div>
+    <div>
+      <h3>Tentativas Restantes:</h3>
+      <p id="tentativas">5</p>
+    </div>
+  </div>
+
+  <script src="jogo.js"></script>
+</body>
+</html>
